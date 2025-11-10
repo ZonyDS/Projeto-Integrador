@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashboard - Controle de Horas Extras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <button class="hamburger-menu" id="hamburger-menu">
+            &#9776; <!-- Hamburger Icon -->
+        </button>
+        <div class="header-left">
+            <h1 class="header-title" id="header-title">Dashboard</h1>
+        </div>
+        <div class="header-profile" id="header-profile">
+            <span class="header-profile-icon">👤</span>
+            <div class="profile-dropdown" id="profile-dropdown">
+                <a href="#" data-view="profile">Meu Perfil</a>
+                <a href="#" id="dropdown-logout-button">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="icon.webp" alt="Logo Fortes Engenharia">
+            </div>
+            <h2>Fortes Engenharia</h2>
+        </div>
+        <ul>
+            <!-- Ícones são placeholders, idealmente usar uma biblioteca como Font Awesome -->
+            <li><a href="#" data-view="dashboard">📊 Dashboard</a></li>
+            <li><a href="#" data-view="requests">📋 Solicitações</a></li>
+            <li><a href="#" data-view="reports">📄 Relatórios</a></li>
+            <li><a href="#" data-view="calendar">📅 Calendário</a></li>
+            <li><a href="#" data-view="users">👥 Usuários</a></li>
+            <li class="sidebar-footer"><a href="#" id="logout-button">↩️ Sair</a></li>
+        </ul>
+    </nav>
+
+    <main class="content" id="main-content">
+        <!-- O conteúdo dinâmico será inserido aqui pelo JavaScript -->
+    </main>
+
+    <div id="toast-container"></div>
+
+    <!-- Modal Structure -->
+    <div id="calendar-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Detalhes do Dia</h2>
+                <button id="modal-close-btn" class="close-button">&times;</button>
+            </div>
+            <div id="modal-body" class="modal-body"></div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
